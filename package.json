@@ -11,7 +11,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@pdf-tools/four-heights-pdf-web-viewer": "^3.8.0",
+    "@pdf-tools/four-heights-pdf-web-viewer": "^3.9.0",
     "copy-webpack-plugin": "^11.0.0",
     "css-loader": "^6.4.0",
     "html-webpack-plugin": "^5.4.0",

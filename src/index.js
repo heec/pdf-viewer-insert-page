@@ -11,19 +11,20 @@ const options = {
         {
           text: 'Add new page',
           icon: 'file-plus.svg',
-          onClick: insertPage,
-        },
-      ],
-    },
-  },
+          onClick: insertPage
+        }
+      ]
+    }
+  }
 }
 
 const pdfViewer = new PdfWebViewer(viewerElement, license, options)
 
 async function insertPage() {
+  // save document
   let pdfBytes = await pdfViewer.saveFile()
 
-  // open pdf in pdf-lib
+  // open document in pdf-lib
   const pdfDoc = await PDFDocument.load(pdfBytes)
 
   // get the page size from the last page
@@ -38,7 +39,7 @@ async function insertPage() {
   newPage.drawText('This page was added with JavaScript', {
     x: 10,
     y: height - 24,
-    size: 14,
+    size: 14
   })
 
   // one time callback to navigate to the new page
